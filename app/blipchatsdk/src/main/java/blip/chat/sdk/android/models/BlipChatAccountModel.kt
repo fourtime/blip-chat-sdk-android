@@ -2,7 +2,7 @@ package blip.chat.sdk.android.models
 
 import org.json.JSONObject
 
-class BlipChatAccountModel {
+open class BlipChatAccountModel {
     var pushToken: String? = null
     var email: String? = null
     var fullName: String? = null

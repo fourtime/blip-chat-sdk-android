@@ -47,6 +47,9 @@ repositories {
 
 dependencies {
 
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(path: ':app:blipchatsdk')
+
     debugImplementation 'blip.sdk.chat:flutter_debug:1.0'
     profileImplementation 'blip.sdk.chat:flutter_profile:1.0'
     releaseImplementation 'blip.sdk.chat:flutter_release:1.0'

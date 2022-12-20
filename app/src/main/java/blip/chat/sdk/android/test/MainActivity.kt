@@ -1,11 +1,22 @@
 package blip.chat.sdk.android.test
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import blip.chat.sdk.android.BlipChatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var button = findViewById<Button>(R.id.button)
+
+        button.setOnClickListener {
+            var intent = Intent(this, BlipChatActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

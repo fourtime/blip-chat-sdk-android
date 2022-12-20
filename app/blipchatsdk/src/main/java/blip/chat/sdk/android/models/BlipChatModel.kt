@@ -7,7 +7,7 @@ enum class TYPE {
     EXTERNAL
 }
 
-class BlipChatModel {
+open class BlipChatModel {
     var key: String? = null
     var type: TYPE? = null
     var token: String? = null

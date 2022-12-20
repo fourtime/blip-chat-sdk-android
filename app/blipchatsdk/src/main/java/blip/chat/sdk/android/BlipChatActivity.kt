@@ -7,7 +7,7 @@ import blip.chat.sdk.android.models.TYPE
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 
-class BlipChatActivity : FlutterActivity() {
+open class BlipChatActivity : FlutterActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

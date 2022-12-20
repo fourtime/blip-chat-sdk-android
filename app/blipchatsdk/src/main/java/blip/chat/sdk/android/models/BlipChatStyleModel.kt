@@ -2,7 +2,7 @@ package blip.chat.sdk.android.models
 
 import org.json.JSONObject
 
-class BlipChatStyleModel {
+open class BlipChatStyleModel {
     var primary: String? = null
     var sentBubble: String? = null
     var receivedBubble: String? = null
