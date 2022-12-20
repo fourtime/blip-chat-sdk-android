@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             startActivity(
-                BlipChatActivity.withCachedEngine(BlipChat.ENGINE_NAME).build(blip, this)
+                BlipChatActivity.withEngineDefault().build(blip, this)
             )
         }
 

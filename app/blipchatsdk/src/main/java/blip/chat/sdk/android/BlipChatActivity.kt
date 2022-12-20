@@ -11,6 +11,10 @@ class BlipChatActivity : FlutterActivity() {
         fun withCachedEngine(cachedEngineId: String): CachedEngineIntentBuilder {
             return CachedEngineIntentBuilder(BlipChatActivity::class.java, cachedEngineId)
         }
+
+        fun withEngineDefault(): CachedEngineIntentBuilder {
+            return CachedEngineIntentBuilder(BlipChatActivity::class.java, BlipChat.ENGINE_NAME)
+        }
     }
 
     class CachedEngineIntentBuilder(
@@ -18,7 +22,8 @@ class BlipChatActivity : FlutterActivity() {
         private val cachedEngineId: String
     ) {
 
-        private val DEFAULT_BACKGROUND_MODE = FlutterActivityLaunchConfigs.BackgroundMode.opaque.name
+        private val DEFAULT_BACKGROUND_MODE =
+            FlutterActivityLaunchConfigs.BackgroundMode.opaque.name
         private var destroyEngineWithActivity = false
         private var backgroundMode = DEFAULT_BACKGROUND_MODE
 
