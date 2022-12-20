@@ -19,7 +19,7 @@ android {
 
     buildTypes {
         profile {
-            initWith debug
+            initWith release
         }
         release {
             minifyEnabled false
