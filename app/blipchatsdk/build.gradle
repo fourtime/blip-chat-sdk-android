@@ -13,11 +13,14 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86_64',"armeabi"
+        }
     }
 
     buildTypes {
         profile {
-            initWith debug
+            initWith release
         }
         release {
             minifyEnabled false
@@ -35,15 +38,14 @@ android {
 
 String storageUrl = System.env.FLUTTER_STORAGE_BASE_URL ?: "https://storage.googleapis.com"
 repositories {
-    maven {
-        url "../blip_chat_sdk/repo"
-    }
-    maven {
-        url "$storageUrl/download.flutter.io"
-    }
+//    maven { url "../blip_chat_sdk/repo" }
+    maven { url 'https://jitpack.io' }
+    maven { url "$storageUrl/download.flutter.io" }
 }
 
 dependencies {
+
+    implementation 'com.github.leonardogbr:blip_chat_android_aar:v1.0.2'
 
     debugImplementation 'blip.sdk.chat:flutter_debug:1.0'
     profileImplementation 'blip.sdk.chat:flutter_profile:1.0'
