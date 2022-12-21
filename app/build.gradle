@@ -39,8 +39,9 @@ android {
 
 String storageUrl = System.env.FLUTTER_STORAGE_BASE_URL ?: "https://storage.googleapis.com"
 repositories {
-    maven { url "$projectDir/blip_chat_sdk/repo" }
-    maven { url 'https://jitpack.io' }
+//    maven { url "$projectDir/blip_chat_sdk/repo" }
+    maven { url 'https://temporary-bkt.s3.sa-east-1.amazonaws.com/blip_chat_sdk/repo' }
+//    maven { url 'https://jitpack.io' }
     maven { url "$storageUrl/download.flutter.io" }
 }
 
@@ -49,7 +50,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(path: ':app:blipchatsdk')
 
-    implementation 'com.github.leonardogbr:blip_chat_android_aar:v1.0.2'
+//    implementation 'com.github.leonardogbr:blip_chat_android_aar:v1.0.2'
 
     debugImplementation  'blip.sdk.chat:flutter_debug:1.0'
     profileImplementation 'blip.sdk.chat:flutter_profile:1.0'
