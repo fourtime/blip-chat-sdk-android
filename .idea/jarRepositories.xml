@@ -16,5 +16,10 @@
       <option name="name" value="maven" />
       <option name="url" value="https://storage.googleapis.com/download.flutter.io" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/app/blip_chat_sdk/repo" />
+    </remote-repository>
   </component>
 </project>

@@ -10,16 +10,16 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-//        maven { url 'blip_chat_sdk/repo' }
+        maven { url 'blip_chat_sdk/repo' }
 //        maven { url 'https://jitpack.io' }
 //        maven { url 'https://temporary-bkt.s3.sa-east-1.amazonaws.com/blip_chat_sdk/repo' }
         maven { url 'https://storage.googleapis.com/download.flutter.io' }
 //        flatDir {
 //            dirs 'blip_chat_sdk'
 //        }
-        flatDir {
-            dirs 'libs'
-        }
+//        flatDir {
+//            dirs 'libs'
+//        }
     }
 }
 rootProject.name = "blip-chat-sdk-android-test"
