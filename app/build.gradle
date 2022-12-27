@@ -40,21 +40,41 @@ android {
 String storageUrl = System.env.FLUTTER_STORAGE_BASE_URL ?: "https://storage.googleapis.com"
 repositories {
 //    maven { url "$projectDir/blip_chat_sdk/repo" }
-    maven { url 'https://temporary-bkt.s3.sa-east-1.amazonaws.com/blip_chat_sdk/repo' }
+//    maven { url 'https://temporary-bkt.s3.sa-east-1.amazonaws.com/blip_chat_sdk/repo' }
 //    maven { url 'https://jitpack.io' }
     maven { url "$storageUrl/download.flutter.io" }
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
 
-    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation fileTree(dir: "libs", include: ["*.aar"])
     implementation project(path: ':app:blipchatsdk')
+
+//    implementation(name:'file_name', ext:'aar')
+
+//    implementation(name:'audio_session-1.0-release', ext:'aar')
+//    implementation(name:'file_picker-1.0-release', ext:'aar')
+//    implementation(name:'flutter-1.0-release', ext:'aar')
+//    implementation(name:'flutter_keyboard_visibility-1.0-release', ext:'aar')
+//    implementation(name:'flutter_plugin_android_lifecycle-1.0-release', ext:'aar')
+//    implementation(name:'just_audio-1.0-release', ext:'aar')
+//    implementation(name:'open_filex-1.0-release', ext:'aar')
+//    implementation(name:'path_provider_android-1.0-release', ext:'aar')
+//    implementation(name:'shared_preferences_android-1.0-release', ext:'aar')
+//    implementation(name:'sqflite-1.0-release', ext:'aar')
+//    implementation(name:'url_launcher_android-1.0-release', ext:'aar')
+//    implementation(name:'video_player_android-1.0-release', ext:'aar')
+//    implementation(name:'wakelock-1.0-release', ext:'aar')
+
 
 //    implementation 'com.github.leonardogbr:blip_chat_android_aar:v1.0.2'
 
-    debugImplementation  'blip.sdk.chat:flutter_debug:1.0'
-    profileImplementation 'blip.sdk.chat:flutter_profile:1.0'
-    releaseImplementation 'blip.sdk.chat:flutter_release:1.0'
+//    debugImplementation  'blip.sdk.chat:flutter_debug:1.0'
+//    profileImplementation 'blip.sdk.chat:flutter_profile:1.0'
+//    releaseImplementation 'blip.sdk.chat:flutter_release:1.0'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
