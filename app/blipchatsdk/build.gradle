@@ -55,7 +55,7 @@ dependencies {
     profileImplementation 'blip.sdk.chat:flutter_profile:1.0'
     releaseImplementation 'blip.sdk.chat:flutter_release:1.0'
 
-    implementation fileTree(dir: "../libs", include: ["*.aar"])
+//    implementation fileTree(dir: "../libs", include: ["*.aar"])
 
 //    implementation(name:'flutter-1.0-release', ext:'aar')
 //    implementation(name:'audio_session-1.0-release', ext:'aar')
